@@ -1,0 +1,175 @@
+// Base
+
+@use "./partials/base/reset";
+@use "./partials/base/tipografia";
+
+// Components
+@use "./partials/components/header";
+@use "./partials/components/general";
+@use "./partials/components/footer";
+@use "./partials/components/hero";
+@use "./partials/components/mas-visitados";
+@use "./partials/components/accordion";
+@use "./partials/components/ig-posts";
+@use "./partials/components/destinos";
+
+// Utilities
+
+@use "./partials/utilities/variables";
+@use "./partials/utilities/mixins";
+@use "./partials/utilities/responsive";
+
+header {
+  background: variables.$gray-bg;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+}
+
+header ul li a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.button {
+  background-color: variables.$green;
+  color: #f1f1f1;
+  font-weight: bold;
+  padding: 10px 20px;
+  display: flex;
+  width: fit-content;
+  border-radius: variables.$button-radius;
+  transition: ease-in-out 0.3s;
+
+  &:hover {
+    transition: ease-in-out 0.3s;
+    transform: scale(1.05);
+  }
+}
+
+.small {
+  font-size: 12px;
+}
+
+.destino-info p {
+  font-size: 18px;
+}
+
+.destino-heading {
+  margin-top: 40px;
+}
+
+.destino-info {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.destino-info .button {
+  margin: 40px auto 0;
+}
+
+.carousel img {
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto 40px;
+  display: flex;
+}
+
+footer {
+  padding: 20px 40px;
+  background: variables.$gray-bg;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista-resenas {
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.lista-resenas__item {
+  background-color: variables.$gray-bg;
+}
+.lista-resenas__item img {
+  width: 100%;
+}
+
+.lista-resenas__item .review {
+  width: 100px;
+}
+
+.lista-destinos__item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.lista-destinos__item-text .button {
+  margin-top: 20px;
+}
+
+footer .logo {
+  width: 200px;
+}
+
+footer .footer-redes {
+  margin-bottom: 20px;
+}
+footer .footer-redes img {
+  width: 30px;
+  height: 30px;
+}
+
+form {
+  max-width: 1200px;
+  padding: 20px;
+  background-color: variables.$gray-bg;
+  margin: 40px auto;
+}
+
+form input {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+form textarea {
+  width: 100%;
+  margin-top: 10px;
+  resize: none;
+}
+
+form button {
+  background-color: lightblue;
+  color: black;
+  border: none;
+  font-weight: bold;
+  padding: 10px;
+  display: flex;
+  width: fit-content;
+}
